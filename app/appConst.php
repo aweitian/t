@@ -10,7 +10,7 @@ define("API_PATH", ENTRY_PATH."/app/api");
 define("DATASRC_PATH", ENTRY_PATH."/app/data/datasrc");
 define("DATA_PATH", ENTRY_PATH."/app/data");
 define("WIDGET_PATH", ENTRY_PATH."/app/widgets");
-define("PUBLIC_HOME",ENTRY_HOME.'/public');
+define("PUBLIC_HOME",ENTRY_HOME.'/static');
 define("UPLOADS_HOME",ENTRY_HOME.'/uploads');
 
 define("START_LEVEL",1);
