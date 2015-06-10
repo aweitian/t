@@ -1,0 +1,81 @@
+/*
+SQLyog Ultimate v8.71 
+MySQL - 5.5.16 : Database - tiandb
+*********************************************************************
+*/
+
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`tiandb` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `tiandb`;
+
+/*Table structure for table `auth_privileges` */
+
+DROP TABLE IF EXISTS `auth_privileges`;
+
+CREATE TABLE `auth_privileges` (
+  `sid` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `code` varchar(50) NOT NULL DEFAULT '0' COMMENT '代码中使用它判断',
+  `name` varchar(50) NOT NULL COMMENT '说明',
+  `comment` varchar(50) NOT NULL DEFAULT '' COMMENT '权限详细描述',
+  PRIMARY KEY (`sid`)
+) ENGINE=MyISAM AUTO_INCREMENT=503 DEFAULT CHARSET=utf8 COMMENT='系统功能表';
+
+/*Data for the table `auth_privileges` */
+
+insert  into `auth_privileges`(`sid`,`code`,`name`,`comment`) values (1,'SYS_COM_MANAGE','系统-公司管理',''),(2,'SYS_USER_MANAGE','系统-用户管理',''),(3,'SYS_LOG_MANAGE','系统-日志查看',''),(4,'SYS_ORDER_MANAGE','系统-订单管理',''),(55,'COM_INFO_MANAGE','公司-信息修改',''),(101,'COM_DEVICE_MANAGE','公司-设备管理',''),(102,'COM_USER_MANAGE','公司-用户管理',''),(103,'COM_ORDER_MANAGE','公司-订单管理',''),(104,'COM_MONITOR_MANAGE','公司-监控',''),(105,'COM_LOG_MANAGE','公司-日志查看',''),(201,'COM_USER_ONLYOWNER','公司-用户编辑','公司用户只能编辑自己的信息'),(300,'COM_WORKORDER_MANAGE','公司-工单管理',''),(301,'COM_WORKORDER_URGE','公司-管理员催办',''),(302,'COM_WORKORDER_VIEWALL','公司-查看所有工单',''),(303,'COM_WORKORDER_ASSIGN','公司-分派工单','公司管理员可以分派一个工单给一个指定用户'),(304,'COM_WORKORDER_NEW','公司-新建工单',''),(305,'COM_WORKORDER_CLOSE','公司-关闭工单',''),(402,'COM_PATROL_NEW','公司-新建巡检',''),(501,'COM_LOG_VIEW','公司-查看日志',''),(502,'SYS_LOG_VIEW','系统-查看日志','');
+
+/*Table structure for table `role_info` */
+
+DROP TABLE IF EXISTS `role_info`;
+
+CREATE TABLE `role_info` (
+  `rolecode` varchar(20) NOT NULL DEFAULT '',
+  `rolename` varchar(50) NOT NULL COMMENT '角色名',
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  `creater` int(10) NOT NULL,
+  `createtime` datetime NOT NULL,
+  `updater` int(10) NOT NULL,
+  `updatetime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='角色表';
+
+/*Data for the table `role_info` */
+
+insert  into `role_info`(`rolecode`,`rolename`,`status`,`creater`,`createtime`,`updater`,`updatetime`) values ('SYS_ADMIN','系统管理员',1,0,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00'),('SYS_USER','业务员/代理',1,0,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00'),('COM_ADMIN','公司管理员',1,0,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00'),('COM_USER','公司用户',1,0,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00');
+
+/*Table structure for table `role_priv_relactions` */
+
+DROP TABLE IF EXISTS `role_priv_relactions`;
+
+CREATE TABLE `role_priv_relactions` (
+  `rolecode` varchar(50) NOT NULL COMMENT '角色CODE',
+  `privilegecode` varchar(50) NOT NULL COMMENT '权限CODE',
+  KEY `rolesid` (`rolecode`,`privilegecode`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='角色功能对照表';
+
+/*Data for the table `role_priv_relactions` */
+
+insert  into `role_priv_relactions`(`rolecode`,`privilegecode`) values ('COM_ADMI','COM_DEVICE_MANAGE'),('COM_ADMI','COM_INFO_MANAGE'),('COM_ADMI','COM_LOG_MANAGE'),('COM_ADMI','COM_LOG_VIEW'),('COM_ADMI','COM_MONITOR_MANAGE'),('COM_ADMI','COM_ORDER_MANAGE'),('COM_ADMI','COM_PATROL_NEW'),('COM_ADMI','COM_USER_MANAGE'),('COM_ADMI','COM_WORKORDER_ASSIGN'),('COM_ADMI','COM_WORKORDER_CLOSE'),('COM_ADMI','COM_WORKORDER_MANAGE'),('COM_ADMI','COM_WORKORDER_NEW'),('COM_ADMI','COM_WORKORDER_URGE'),('COM_ADMI','COM_WORKORDER_VIEWALL'),('COM_USER','COM_PATROL_NEW'),('COM_USER','COM_USER_ONLYOWNER'),('COM_USER','COM_WORKORDER_MANAGE'),('SYS_ADMIN','COM_USER_MANAGE'),('SYS_ADMIN','SYS_COM_MANAGE'),('SYS_ADMIN','SYS_LOG_MANAGE'),('SYS_ADMIN','SYS_LOG_VIEW'),('SYS_ADMIN','SYS_ORDER_MANAGE'),('SYS_ADMIN','SYS_USER_MANAGE'),('SYS_USER','SYS_COM_MANAGE'),('SYS_USER','SYS_LOG_MANAGE'),('SYS_USER','SYS_ORDER_MANAGE'),('SYS_USER','SYS_USER_MANAGE');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+CREATE TABLE `user_auth_info` (
+  `usersid` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `userid` varchar(50) NOT NULL,
+  `passwd` varchar(64) NOT NULL COMMENT '密码',
+  `rolecode` varchar(50) NOT NULL DEFAULT '0' COMMENT '角色ID',
+  PRIMARY KEY (`usersid`),
+  UNIQUE KEY `userid` (`userid`)
+) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8 COMMENT='用户表'
+

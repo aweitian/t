@@ -1,0 +1,137 @@
+
+array (
+  'nsDeco' => 
+  array (
+    0 => 'n',
+    1 => 'm',
+    2 => '/a/b/c',
+  ),
+  'dsType' => '22ld',
+  'datasrc' => 
+  array (
+    '/jk' => 
+    array (
+      0 => 
+      array (
+        0 => '5',
+        1 => '100',
+      ),
+      1 => 
+      array (
+        0 => '10',
+        1 => '100',
+      ),
+      2 => 
+      array (
+        0 => '15',
+        1 => '505',
+      ),
+    ),
+    '/vb/vcf' => 
+    array (
+      0 => 
+      array (
+        0 => '5',
+        1 => '1',
+      ),
+      1 => 
+      array (
+        0 => '10',
+        1 => '2',
+      ),
+      2 => 
+      array (
+        0 => '15',
+        1 => '3',
+      ),
+    ),
+    '/vc/mm' => 
+    array (
+      0 => 
+      array (
+        0 => '5',
+        1 => '1',
+      ),
+      1 => 
+      array (
+        0 => '10',
+        1 => '2',
+      ),
+      2 => 
+      array (
+        0 => '15',
+        1 => '3',
+      ),
+    ),
+    '/vb/vcc/vccf' => 
+    array (
+      0 => 
+      array (
+        0 => '5',
+        1 => '1',
+      ),
+      1 => 
+      array (
+        0 => '10',
+        1 => '2',
+      ),
+      2 => 
+      array (
+        0 => '15',
+        1 => '3',
+      ),
+    ),
+  ),
+  'data' => 
+  array (
+    'jk' => 
+    array (
+      'text' => 'jk',
+      'data' => 
+      array (
+      ),
+    ),
+    'vc' => 
+    array (
+      'text' => 'vc',
+      'data' => 
+      array (
+        'mm' => 
+        array (
+          'text' => 'mm',
+          'data' => 
+          array (
+          ),
+        ),
+      ),
+    ),
+    'vb' => 
+    array (
+      'text' => 'vb',
+      'data' => 
+      array (
+        'vcc' => 
+        array (
+          'text' => 'vcc',
+          'data' => 
+          array (
+            'vccf' => 
+            array (
+              'text' => 'vccf',
+              'data' => 
+              array (
+              ),
+            ),
+          ),
+        ),
+        'vcf' => 
+        array (
+          'text' => 'vcf',
+          'data' => 
+          array (
+          ),
+        ),
+      ),
+    ),
+  ),
+)

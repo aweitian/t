@@ -1,0 +1,97 @@
+@CHARSET "UTF-8";
+
+#navmenu-container{
+	background:#322f32;
+}
+#navmenu{
+
+}
+#navmenu>li>ul>li{
+	
+}
+a{
+	text-decoration:none;
+	font-size:15px;
+	font-family:"宋体";
+}
+
+.menubar{
+	border-top: 2px solid #333;
+	border-bottom: 1px solid #cecece;
+	background: #fff;
+	box-shadow: inset 0px 6px 10px #e4d8d8, 0px -1px 6px #6c6c6c;
+}
+.table100{
+	width:98%;
+	margin:8px auto;
+}
+.textSuccess{
+	color:rgb(28, 184, 65);
+}
+
+.bgSuccess{
+	background:rgb(28, 184, 65);
+}
+.textFail{
+	color: rgb(202, 60, 60); 
+}
+.bgFail{
+	background: rgb(202, 60, 60); 
+}
+.borderFail{
+	border:1px solid rgb(202, 60, 60); 
+}
+.padding5{
+	padding:8px;
+}
+
+.redirct-info{
+	border:2px solid gray;
+	padding:25px;
+	margin-top:70px;
+	vertical-align:center;
+}
+.redirct-info-ok{
+	background:#fff;
+}
+.redirct-info-fail{
+	background:#fff;
+}
+.redirct-info .direct-count{
+	color:#888;
+	font-size:12px;
+	margin-top:25px;
+}
+.redirct-info-ok .ico{
+	color:rgb(28, 184, 65);
+	font-size:50px;
+	margin-right:28px;
+}
+.redirct-info-fail .ico{
+	color:rgb(202, 60, 60);
+	font-size:50px;
+	margin-right:28px;
+}
+.node-form{
+}
+.node-form input[type=text]{
+	width:50%;
+}
+.node-form select{
+	min-width:30%;
+}
+.smalllen{
+	width:50px;
+}
+.tbhd-input{
+	padding: .5em .6em;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-shadow: inset 0 1px 3px #ddd;
+	border-radius: 4px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+

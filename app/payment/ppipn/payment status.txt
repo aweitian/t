@@ -1,0 +1,128 @@
+
+PayPal付款状态词汇表Payment status glossary
+生效中
+?租用：您为此租用预定了自动付款
+Active
+?Subscriptions: You have automatic payments scheduled for this subscription.
+已取消
+?收款请求：您或付款人取消了收款请求。
+?已付款项：您取消了这笔付款，相关款项已退回到您的账户。
+?租用：租用已取消，将不再进行付款。
+Canceled
+?Money requests: Either you or the sender canceled the request.
+?Payments sent: You canceled the payment, and the money was refunded to your account.
+?Subscriptions: The subscription was canceled, and no more payments will be made.
+已结清
+?已收款项：您收到了电子支票付款，相关款项现已存入您的账户。
+Cleared
+?Payments received: You received an eCheck payment, and the money is now in your account.
+已完成
+?使用您的银行账户进行充值：转账已完成，相关款项已存入您的账户。
+?已收款项：交易成功，相关款项已存入您的账户。
+?已付款项：收款人已收到您的付款。
+?租用：已完成对此租用的所有付款。
+?提现至您的银行账户：我们已发送您的款项，这笔款项将在几个工作日内显示在您的银行账户中。
+Completed
+?Adding funds from your bank account: The transfer has been completed, and the money is in your account.
+?Payments received: The transaction was successful, and the money is in your account.
+?Payments sent: The recipient received your payment.
+?Subscriptions: All payments for this subscription have been made.
+?Withdrawals to your bank account: We have sent your money, and it should be in your bank account within a few business days.
+已拒绝
+?已付款项：收款人决定不接受您的付款。
+?已收款项：您决定不接受这笔付款。
+Denied
+?Payments sent: The recipient decided not to accept your payment.
+?Payments received: You decided not to accept the payment.
+已失效
+?当您下订单时：交易已失效。
+Expired
+?When you place an order: The transaction expired.
+失败
+?已付款项：您的付款未成功完成。
+Failed
+?Payments sent: Your payment didn’t go through.
+Back to top
+冻结
+?已收款项：相关款项已被冻结，是否撤销待定。
+?已付款项：相关款项已被冻结，是否撤销待定。
+Held
+?Payments received: The money is being held, pending reversal.
+?Payments sent: The money is being held, pending reversal.
+处理中
+?已付款项：您的付款已发送，但收款人尚未接受这笔付款。
+In progress
+?Payments sent: Your payment was sent, but the recipient hasn’t accepted it yet.
+Back to top
+冻结中
+?已收款项：相关款项已被临时冻结。付款人可能提出了争议，或我们正在审查此交易。
+?已付款项：在您对交易提出争议时，相关款项已被冻结。
+?提现至您的银行账户：由于您的银行账户存在问题，因此提现无法成功完成。
+On hold
+?Payments received: The money is being held temporarily. The sender may have filed a dispute, or we are reviewing the transaction.
+?Payments sent: The money is on hold while you dispute the transaction.
+?Withdrawals to your bank account: There’s a problem with your bank account, and your withdrawal couldn’t go through.
+审核中——立即发货
+?已收款项：此交易处于“eBay物品付款被冻结”状态。您的资金将在21天后解冻。要更快获得您的付款，请立即发送商品。
+On hold – ship now
+?Payments received: The transaction is under a payment hold for an eBay item. Your funds will be released after 21 days. To get your payment sooner, please ship the merchandise right away
+已付款
+?收款请求：您或收款人已获得全额付款。
+Paid
+?Money requests: Either you or the recipient was paid the full amount.
+待处理
+?使用您的银行账户进行充值：您申请了银行转账。相关款项将很快出现在您的PayPal账户中。
+?收款请求：已提出收款请求，但尚未获得付款。您可以支付、编辑、发送提醒或取消请求。
+?提现至您的银行账户：您已请求将资金从PayPal转至您的银行账户。
+Pending
+?Adding funds from your bank account: You requested a bank transfer. The money should be in your PayPal account soon.
+?Money requests: The money request has not yet been paid. You can pay, edit, send a reminder, or cancel the request.
+?Withdrawals to your bank account: You requested a transfer from PayPal to your bank account.
+已处理
+?使用您的银行账户进行充值：我们已将您的请求转往您的银行。相关款项将很快出现在您的PayPal账户中。
+Processed
+?Adding funds from your bank account: We have transferred your request to your bank. The money should be in your PayPal account shortly.
+已退款
+?已退款或部分退款：如果您是通过借记卡或信用卡付款的，退款将退回该卡。否则，退款将转入您的PayPal账户。
+?已付款项：收款人已退还您的付款。
+Refunded
+?Refunded or Partially refunded: If you paid by debit or credit card, your refund will go to that card. Otherwise, your refund will go to your PayPal account.
+?Payments sent: The recipient refunded your payment.
+已拒绝
+?使用您的银行账户进行充值：您的银行转账已被拒绝。我们将通过电子邮件告知您转账被拒绝的原因。
+?已付款项：收款人未接收您的付款。
+Refused
+?Adding funds from your bank account: Your bank transfer was rejected. We’ll email you why this happened.
+?Payments sent: The recipient didn’t receive your payment.
+已退还
+?已付款项：由于收款人在30天内未申领您的付款，因此这笔款项已被退回。
+. Returned
+?Payments sent: Your money was returned because the recipient didn’t claim the payment within 30 days
+已撤消
+?已付款项：您或PayPal已取消这笔付款。
+?提现至您的银行账户：转账已被拒绝，我们已将这笔款项退还到您的PayPal账户。我们将发送电子邮件给您，说明出现这种情况的原因。
+Reversed
+?Payments sent: Either you or PayPal canceled the payment.
+?Withdrawals to your bank account: The transfer was denied, and we credited the money back to your PayPal account. We’ll email you why this happened
+临时冻结
+?已付款项和已收款项：授权过程中，可能会临时冻结相关款项。此过程通常不会持续很长时间，您会看到状态更改为“已完成”。
+emporary hold
+?Payments sent and received: A temporary hold may be placed on money during the authorization process. This process usually doesn’t take long, and you’ll see the status change to “Completed.
+待领取
+?已付款项：付款可能因多种原因而处于待领取状态：
+1.收款人尚未注册PayPal账户，并且尚未收到您的付款。
+2.收款人有一个个人账户（此账户每年接收的卡付款笔数不能超过5笔），并尚未升级。或者，收款人尚未接受这笔付款。
+3.收款人有高级账户或企业账户，并已选择以个人方式接受或拒绝由尚未具有确认地址的客户发送的付款。
+已从您的PayPal账户扣除这笔款项。点击待领取，然后点击取消付款，您可以取消这笔付款。请注意，所有待领取交易将在30天后自动取消。
+Unclaimed
+?Payments Sent: A payment may be unclaimed for several reasons:
+1.The recipient has not signed up for a PayPal account and has not yet received your payment.
+2.The recipient has a Personal account (which cannot receive more than 5 card-funded payments a year) and has not upgraded. Or the recipient hasn’t accepted the payment.
+3.The recipient has a Premier or Business account and has chosen to individually accept or decline payments from customers who don’t have a confirmed address.
+The money has been deducted from your PayPal account. You can cancel this payment by clicking Unclaimed and then Cancel Payment. Please note that all unclaimed transactions are automatically canceled after 30 days.
+未结清
+?已收款项：这笔电子支票付款正在处理中。建议您在付款结清后再发货。
+?发送付款时：这笔电子支票付款正在处理中。
+Uncleared
+?Payments received: The eCheck payment is in process. We recommend you wait to ship until the payment clears.
+?W

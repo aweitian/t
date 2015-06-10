@@ -1,0 +1,3 @@
+页面由一些WIDGET组成
+每个WIDGET都有一个ID，存在表tdc_widget_struct中
+表tdc_widget_struct的SID和NODEPATH#ORDER一一对应

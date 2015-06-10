@@ -1,0 +1,14 @@
+模块由THEMME下UI初始化
+include layout.tpl.php
+
+
+{
+	nav:[
+		{text:text,link:link}
+		...
+	
+	],
+	
+
+
+}

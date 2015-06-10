@@ -1,0 +1,4 @@
+if($payment_status == "Refunded" || $payment_status == "Reversed" || $payment_status == "Partially Refunded"){mysql_query("UPDATE members SET month_date = '$gettoday', subscr_id = '$subscr_id', subscr_cancel = 'Y', active = 'N', prepay = 'N' WHERE id='$id'");}
+
+
+if($payment_status == "Refunded" || $payment_status == "Reversed" || $payment_status == "Partially Refunded"){if($subscr_id){mysql_query("UPDATE members SET month_date = '$gettoday', subscr_id = '$subscr_id', subscr_cancel = 'Y', active = 'N', prepay = 'N' WHERE id='$id'");} else {mysql_query("UPDATE members SET month_date = '$gettoday', subscr_cancel = 'Y', active = 'N', prepay = 'N' WHERE id='$id'");}}

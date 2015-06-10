@@ -1,0 +1,26 @@
+22ld
+22ldp
+		calc support namespace
+		
+init args
+	
+		{
+			namespaceWrap:[/aaa/www/ccc,/aa/bb,...] //find matched pattern or the most near length+ 		
+			data:{
+				nsk1:{
+					text:
+					data:{
+						nsk11:{
+							text:
+							data:{
+								nsk111:...
+							
+							}
+						
+						},
+						nsk12:...
+					}	
+				},
+				nsk2:...
+			}
+		}	

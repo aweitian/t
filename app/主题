@@ -1,0 +1,3 @@
+themes目录下有一个ui.php
+里面必须有一个类UI.要实现IUi接口
+在view中直接调用接口WRAP

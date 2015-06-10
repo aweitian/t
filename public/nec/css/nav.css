@@ -1,0 +1,18 @@
+/* 文本型圆角背景导航 */
+.nav,.nav li,.nav li a,.nav .corner{background:url(nav.png) no-repeat -9999px -9999px;height:40px;line-height:40px;}
+.nav{position:relative;margin:0 6px;text-align:center;font-size:0;letter-spacing:-0.307em;*letter-spacing:normal;*word-spacing:-1px;color:#fff;background-repeat:repeat-x;background-position:0 0;}
+.nav li,.nav li a{display:inline-block;*display:inline;*zoom:1;}
+.nav li{padding:0 0 0 1px;font-size:14px;letter-spacing:normal;word-spacing:normal;background-position:0 -150px;}
+.nav li.first{background:none;}
+.nav li{position:relative;padding-left:2px;background-position:-91px -55px;}
+.nav li a{padding:0 20px;font-weight:bold;font-size:14px;letter-spacing:normal;word-spacing:normal;color:#556165;}
+.nav li a:hover{color:#488c9d;}
+.nav li i{display:none;position:absolute;left:50%;top:35px;width:14px;height:8px;margin-left:-6px;overflow:hidden;background-position:0 -66px;}
+.nav .corner{position:absolute;top:0;width:6px;overflow:hidden;}
+.nav .corner-l{left:-6px;background-position:0 -50px;}
+.nav .corner-r{left:100%;background-position:0 -100px;}
+/* 文本型圆角背景导航-居左 */
+.nav-1{text-align:left;}
+/* 文本型圆角背景导航-居右 */
+.nav-2{text-align:right;}
+

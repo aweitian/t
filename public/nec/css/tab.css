@@ -1,0 +1,30 @@
+/* 含标题和Tab的模块头部-默认不定宽 */
+/* http://nec.netease.com/library/111228/2 */
+.tab{height:35px;line-height:35px;padding:1px 0 0;border-bottom:1px solid #ddd;}
+.tab h2,.tab ul,.tab li{float:left;display:inline;}
+.tab h2{margin:0 20px 0 0;font-size:16px;}
+.tab ul{margin-left:-2px;}
+.tab li{position:relative;margin:-1px 0 0 2px;}
+.tab li a,.tab li a:hover{text-decoration:none;color:#666;}
+.tab li a{float:left;padding:0 15px;border:1px solid #ddd;border-bottom:0;border-radius:5px 5px 0 0;text-align:center;font-size:14px;background:#f8f8f8;background:-webkit-gradient(linear,0% 0%,0% 100%,from(#fdfdfd),to(#f8f8f8));background:-webkit-linear-gradient(#fdfdfd,#f8f8f8);background:-moz-linear-gradient(#fdfdfd,#f8f8f8);background:-ms-linear-gradient(#fdfdfd,#f8f8f8);background:linear-gradient(#fdfdfd,#f8f8f8);}
+.tab li a:hover{background:#fff;}
+.tab li.z-crt a{position:relative;padding-bottom:1px;margin-bottom:-1px;background:#fff;}
+.tab .more{float:right;margin-left:10px;}
+/* 有背景 */
+.tab-bg{padding:11px 10px 0;border-radius:5px 5px 0 0;background:#f7f7f7;}
+/* tab无缝 */
+.tab-sl li{margin-left:-1px;}
+.tab-sl li a{border-radius:0;}
+.tab-sl li:first-child a{border-top-left-radius:5px;}
+.tab-sl li:last-child a{border-top-right-radius:5px;}
+/* tab居右 */
+.tab-rt h2{margin-right:0;}
+.tab-rt ul{float:right;}
+/* tab较小 */
+.tab-sm{height:25px;line-height:25px;}
+.tab-sm h2{font-size:14px;}
+.tab-sm li a{padding:0 10px;font-size:12px;}
+/* tab定宽 */
+.tab-fw li a{width:78px;padding:0;}
+/* tab直角 */
+.tab-ra,.tab-ra li a,.tab-ra li:first-child a,.tab-ra li:last-child a{border-radius:0;}

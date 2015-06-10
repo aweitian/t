@@ -1,0 +1,48 @@
+//主题约束
+	主题要主名字和次名字共同决定
+
+所有的文件名小写,linux大小写敏感
+
+主目录名下要有desc.ini,pc文件夹,如果支持手机还要有个mobile文件夹
+
+次名字/pc目录下必须有一个名字叫default的文件夹
+每个次目录下
+		必须有缩略图:thumbnail.(png|jpg|gif)//优先级就是pjg
+		必须有layout.php文件
+		可选dataProvider.php文件,存在必须继承uiDataProvider
+		没有就实例化uiDataProvider
+/**
+	 * 返回格式
+	 * array(
+	 * 	maintheme=>array(
+	 * 		subtheme1=>{
+	 * 			pcthumbnail=>png|jpg|gif
+	 * 			mobilethumbnail=png|jpg|gif OR ""
+	 * 		}
+	 * 		subtheme2=>...
+	 * 		subtheme3=>...
+	 * 	)
+	 * )
+	 * 一个正确的主题结构
+	 * xxx
+	 * 		pc
+	 * 			default
+	 * 				layout.php
+	 * 				thumbnail.(png|jpg|gif)
+	 * 				...
+	 * 			xmas(eg)
+	 * 				layout.php
+	 * 				thumbnail.(png|jpg|gif)
+	 * 				...
+	 * 			...
+	 * 		mobile(optinal)
+	 * 			default
+	 * 				layout.php
+	 * 				thumbnail.(png|jpg|gif)
+	 * 				...
+	 * 			...
+	 * 		desc.ini
+	 * 			
+	 * @throws Exception
+	 * @return array
+	 */		

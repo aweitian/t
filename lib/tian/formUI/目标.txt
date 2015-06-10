@@ -1,0 +1,8 @@
+//给一个表名就能生成这个表的CRUD的UI
+
+场景类dataTable,tianDataTable
+
+发送tableDataRequest请求对象
+处理请求(dataProvider)
+返回tableDataResponse
+序列化tableDataResponse

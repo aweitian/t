@@ -1,0 +1,29 @@
+"nsDeco" => array("/aa/bb/cc","/"),
+	"dsType" => "22ld",
+	"namespace" => true,
+	"datasrc"=>array(
+		"/p1/p2" => array("data"),
+		"/p1/p3" => array("22ld data")
+	),
+	"data" => array(
+		"key1" => array(
+			"text" => "text1",
+			"data" => array()
+		),
+		"key2" => array(
+			"text" => "text2",
+			"data" => array()
+		)
+	)// or array()
+}
+array
+  'type' => string 'table_22ap' (length=10)
+  'conf' => 
+    array
+      'unit' => string '1 g' (length=3)
+      'tableCaption' => string 'qc' (length=2)
+      'showType' => string 'grid' (length=4)
+      'titleType' => string 'text' (length=4)
+      'comment' => string '' (length=0)
+
+{"status":"ok","response":{"type":"spancalc_22ld","conf":{"unit":"100","cachejs":"1","comment":""}}}	
