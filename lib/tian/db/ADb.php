@@ -20,19 +20,14 @@ abstract class ADb implements IDb{
 		
 	}
 	public function getDbConnection(){
-		$db_pwd = array();
-		if(ENVIR==ENVIR_COMMON){
-			$db_pwd = require ENTRY_PATH."/pd/db_pwd/local.php";
-		}
-		elseif (ENVIR==ENVIR_SAE){
-			$db_pwd = require ENTRY_PATH."/pd/db_pwd/sae.php";
-		}
-		elseif (ENVIR==ENVIR_BAE){
-			$db_pwd = require ENTRY_PATH."/pd/db_pwd/bae.php";
-		}
-		elseif (ENVIR==ENVIR_OPENSHIFT){
-			$db_pwd = require ENTRY_PATH."/pd/db_pwd/openshift.php";
-		}
+		$db_pwd =  array(
+			"hostname" => DB_HOST,
+			"port" => DB_PORT,
+			"username" => DB_USER,
+			"password" => DB_PASS,
+			"database" => DB_NAME,
+			"charset" => "utf8"
+		);
 		return new pdoConnection($db_pwd);
 	}
 	public function getTableInfo($tabname,$kv=null){

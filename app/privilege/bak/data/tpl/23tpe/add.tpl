@@ -1,4 +1,4 @@
-<script src="/sea/public/js/privilege/datasrc/23tpe.js"></script>
+<script src="/sea/static/js/privilege/datasrc/23tpe.js"></script>
 <script>
 function showSampleData(){
 	$(".input-textarea").val('[["wow gold 10g","require level 50+",20],["aion pl svr 1-50","require gold 10",50],["wow gears","",7.3],["test","",12]]');

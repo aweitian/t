@@ -4,11 +4,8 @@
  * Author:Awei.tian
  * Function:
  */
-return array(
-	"database" => SAE_MYSQL_DB,
-	"hostname" => SAE_MYSQL_HOST_M,
-	"port" => SAE_MYSQL_PORT,
-	"username" => SAE_MYSQL_USER,
-	"password" => SAE_MYSQL_PASS,
-	"charset" => "utf8"
-);
+define('DB_HOST',SAE_MYSQL_HOST_M);
+define('DB_PORT',SAE_MYSQL_PORT);
+define('DB_USER',SAE_MYSQL_USER);
+define('DB_PASS',SAE_MYSQL_PASS);
+define('DB_NAME',SAE_MYSQL_DB);

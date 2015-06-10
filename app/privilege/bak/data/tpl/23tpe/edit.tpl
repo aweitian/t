@@ -1,4 +1,4 @@
-<script src="/sea/public/js/privilege/datasrc/23tpe.js"></script>
+<script src="/sea/static/js/privilege/datasrc/23tpe.js"></script>
 <script>
 function showSampleData(){
 	

@@ -115,7 +115,7 @@ function checksubmit(form){
 				        	<div style="padding:5px;">
 				        	<input<?php if($pay == "paypal"):?> checked<?php endif;?> id="paym_<?php print $pay?>" type="radio" name="pmtype" value="<?php print $pay?>">
 				        	<label for="paym_<?php print $pay?>">
-								<img alt="" src="<?php print ENTRY_HOME?>/public/images/payments/<?php print $pay?>.png">
+								<img alt="" src="<?php print ENTRY_HOME?>/static/images/payments/<?php print $pay?>.png">
 				        	</label>
 				        	</div>
 				        	<?php endforeach;?>

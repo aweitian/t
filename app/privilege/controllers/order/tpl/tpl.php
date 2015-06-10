@@ -41,7 +41,7 @@ $page_data = $pagination->getData();
 //   string(19) "2015-04-08 13:43:47"
 // }
 ?>
-<script src="<?php print ENTRY_HOME?>/public/js/privilege/showOrderDetail.js"></script>
+<script src="<?php print ENTRY_HOME?>/static/js/privilege/showOrderDetail.js"></script>
 
 
 

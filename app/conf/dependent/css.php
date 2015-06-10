@@ -5,5 +5,5 @@
  * function: 
  */
 return array(
-	"grid" => ENTRY_HOME."/public/css/grid.css",
+	"grid" => ENTRY_HOME."/static/css/grid.css",
 );

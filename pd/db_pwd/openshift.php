@@ -4,11 +4,8 @@
  * Author:Awei.tian
  * Function:
  */
-return array(
-	"database" => "v",
-	"hostname" => $OPENSHIFT_MYSQL_DB_HOST,
-	"port" => $OPENSHIFT_MYSQL_DB_PORT,
-	"username" => 'adminW2qA6HN',
-	"password" => '37ss8uKmBUgv',
-	"charset" => "utf8"
-);
+define('DB_HOST','127.13.19.2');
+define('DB_PORT','3306');
+define('DB_USER','adminBZqszNx');
+define('DB_PASS','83Jl9CIWilKk');
+define('DB_NAME','v');

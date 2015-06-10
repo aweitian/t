@@ -46,7 +46,7 @@
 	<td colspan="3" class="foot-link">
 	<?php $i=0;?>
 	<?php foreach (app::getPayMethods() as $pay):?>
-		<img style="margin:15px;" alt="" src="<?php print ENTRY_HOME?>/public/images/payments/<?php print $pay?>.png">
+		<img style="margin:15px;" alt="" src="<?php print ENTRY_HOME?>/static/images/payments/<?php print $pay?>.png">
 	<?php $i++;if($i==3)echo "<br>"?>
 	<?php endforeach;?>
 	

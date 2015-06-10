@@ -25,7 +25,7 @@ class privilege extends Controller{
 	}
 	protected function _skeleton($content){
 		return strtr(file_get_contents(dirname(__FILE__)."/misc/skeleton.tpl"),array(
-				"{csspath}" => "/sea/public/nec/css/",
+				"{csspath}" => "/sea/static/nec/css/",
 				"{content}" => $content
 		));
 	}

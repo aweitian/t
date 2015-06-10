@@ -1,4 +1,4 @@
-<script src="/sea/public/js/privilege/datasrc/22ap.js"></script>
+<script src="/sea/static/js/privilege/datasrc/22ap.js"></script>
 <script>
 function showSampleData(){
 	$(".input-textarea").val("[[30,2.5],[60,4.9],[90,7.3],[120,9.5]]");

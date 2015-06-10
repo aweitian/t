@@ -4,11 +4,8 @@
  * Author:Awei.tian
  * Function:
  */
-return array(
-	"database" => "tiandb",
-	"hostname" => "localhost",
-	"port" => "3306",
-	"username" => "root",
-	"password" => "root",
-	"charset" => "utf8"
-);
+define('DB_HOST',"localhost");
+define('DB_PORT',"3306");
+define('DB_USER',"root");
+define('DB_PASS',"root");
+define('DB_NAME',"tiandb");

@@ -11,9 +11,9 @@
 <link rel="stylesheet" href="{csspath}grid.css"/>
 <link rel="stylesheet" href="{csspath}form.css"/>
 <link rel="stylesheet" href="{csspath}table.css"/>
-<script src="/sea/public/js/jquery-1.10.0.js"></script>
-<script src="/sea/public/js/privilege/php.js"></script>
-<script src="/sea/public/js/privilege/json.js"></script>
+<script src="/sea/static/js/jquery-1.10.0.js"></script>
+<script src="/sea/static/js/privilege/php.js"></script>
+<script src="/sea/static/js/privilege/json.js"></script>
 </head>
 <body>
 <div class="container_12">

@@ -76,7 +76,7 @@ class conf_table_23tpe extends AConf{
 			"tableCaption" => "",
 			"titleType" => "text",
 			"extraShowMode" => "text",
-			"iconPlaceHolder" => "<span class=\"widget-table-icon\" {placeholder}><img src=\"/public/img/detail.gif\"></span>",
+			"iconPlaceHolder" => "<span class=\"widget-table-icon\" {placeholder}><img src=\"/static/img/detail.gif\"></span>",
 			"extraShowMask" => "tpe",
 			"extraCaption" => "",
 			"showType" => "table",

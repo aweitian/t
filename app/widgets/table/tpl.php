@@ -27,8 +27,8 @@ if($mutistyle == "auto")
 $default_ns = key($html);
 //TABLE CATPION 的选择:如果只有一个表格,tableCaption的优先级比ns高,其它情况ns高
 ?>
-<script src="<?php echo ENTRY_HOME;?>/public/js/jquery-1.10.0.js"></script>
-<script src="<?php echo ENTRY_HOME;?>/public/js/ext.js"></script>
+<script src="<?php echo ENTRY_HOME;?>/static/js/jquery-1.10.0.js"></script>
+<script src="<?php echo ENTRY_HOME;?>/static/js/ext.js"></script>
 
 <?php if ($mutistyle == "collapse"):?>
 

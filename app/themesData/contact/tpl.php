@@ -8,7 +8,7 @@
 				<h3 class="u-tt-lg f-tac" style="line-height:250%;">Customer Service</h3>
 
 			        <a href="#boxed">
-			            <!-- --> <img src="<?php print ENTRY_HOME?>/public/images/online.gif" alt="" width="100%"/>
+			            <!-- --> <img src="<?php print ENTRY_HOME?>/static/images/online.gif" alt="" width="100%"/>
 			        </a>
 			        <br>
 			        <table style="width:100%;height:113px;margin-top:5px">

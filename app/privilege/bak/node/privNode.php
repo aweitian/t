@@ -14,7 +14,7 @@ class privNode{
 	 */
 	private $db;
 	/**
-	 * /sea/public/css/nec/
+	 * /sea/static/css/nec/
 	 * @var IPdoBase
 	 */
 	private $pdo;
@@ -76,7 +76,7 @@ class privNode{
 	}
 	private function _skeleton($content){
 		return strtr(file_get_contents(dirname(__FILE__)."/tpl/skeleton.tpl"),array(
-			"{csspath}" => "/sea/public/nec/css/",
+			"{csspath}" => "/sea/static/nec/css/",
 			"{content}" => $content
 		));
 	}

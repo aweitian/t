@@ -5,5 +5,5 @@
  * function: 
  */
 return array(
-	"jquery" => ENTRY_HOME."/public/js/jquery-1.10.0.js",
+	"jquery" => ENTRY_HOME."/static/js/jquery-1.10.0.js",
 );

@@ -89,10 +89,10 @@ function checksubmit(){
 }
 //-->
 </script>
-<script type="text/javascript" src="<?php echo ENTRY_HOME;?>/public/js/privilege/json_beauty.js"></script>
-<!--<script type="text/javascript" src="<?php echo ENTRY_HOME;?>/public/codeBrush/shCore.js"></script>-->
-<!--<script type="text/javascript" src="<?php echo ENTRY_HOME;?>/public/codeBrush/shBrushJScript.js"></script>-->
-<!--<link type="text/css" rel="stylesheet" href="<?php echo ENTRY_HOME;?>/public/codeBrush/shCoreDefault.css"/>-->
+<script type="text/javascript" src="<?php echo ENTRY_HOME;?>/static/js/privilege/json_beauty.js"></script>
+<!--<script type="text/javascript" src="<?php echo ENTRY_HOME;?>/static/codeBrush/shCore.js"></script>-->
+<!--<script type="text/javascript" src="<?php echo ENTRY_HOME;?>/static/codeBrush/shBrushJScript.js"></script>-->
+<!--<link type="text/css" rel="stylesheet" href="<?php echo ENTRY_HOME;?>/static/codeBrush/shCoreDefault.css"/>-->
 <table class="pure-table pure-table-bordered pure-table-striped table100">
 <caption>
 	结点路径:<?php echo navPath($path,$this);?>

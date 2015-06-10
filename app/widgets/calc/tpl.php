@@ -32,9 +32,9 @@ function add_prefix_forname($str){
 	return preg_replace("/name=\"([\w]+)\"/", "name=\"_$1\"",$str);
 }
 ?>
-<script src="<?php echo ENTRY_HOME;?>/public/js/jquery-1.10.0.js"></script>
-<script src="<?php echo ENTRY_HOME;?>/public/js/ext.js"></script>
-<script src="<?php echo ENTRY_HOME;?>/public/js/calc.js<?php echo jsargs();?>"></script>
+<script src="<?php echo ENTRY_HOME;?>/static/js/jquery-1.10.0.js"></script>
+<script src="<?php echo ENTRY_HOME;?>/static/js/ext.js"></script>
+<script src="<?php echo ENTRY_HOME;?>/static/js/calc.js<?php echo jsargs();?>"></script>
 <?php if($this->config->conf["cachejs"]):?>
 <script>(function(){<?php echo STATIC_JS_CALC_NAME?>['<?php echo $this->order?>']=<?php echo $this->getJsData()?>;})();</script>
 <?php endif;?>

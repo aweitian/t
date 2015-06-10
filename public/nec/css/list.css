@@ -1,7 +1,0 @@
-/* 带点文字链接列表-默认方点 */
-.list2{padding-top:1px;line-height:1.5;}
-.list2 ul{margin-top:-6px;list-style-type:none;}
-.list2 li{position:relative;padding-left:10px;margin-top:5px;zoom:1;}
-.list2 li i.dot{position:absolute;top:0.75em;left:0;width:0;height:0;overflow:hidden;margin-top:-3px;border:2px solid;}
-/* 固定文字较大 */
-.list2-lg{font-size:14px;}
