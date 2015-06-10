@@ -8,7 +8,7 @@ require_once LIB_PATH."/mvc/route/routes/defaultRoute.php";
 
 class webservicesRoute extends defaultRoute{
 	public function __construct(){
-		$p=str_repeat("p", count(explode("/", trim(ENTRY_HOME,"/"))));
+		$p=tian::getDefualtPreurlMask();
 		parent::__construct(ENTRY_HOME."/wsv2/[\d\D]+",$p."mca");
 	}
 }

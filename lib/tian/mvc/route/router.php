@@ -35,7 +35,7 @@ class router{
 	{
 		if (!$this->hasRoute('default')) {
 			C::addAutoloadPath("defaultRoute", LIB_PATH."/mvc/route/routes/defaultRoute.php");
-			$p=str_repeat("p", count(explode("/", trim(ENTRY_HOME,"/"))));
+			$p=tian::getDefualtPreurlMask();
 			$compat = new defaultRoute(".*",$p."ca");
 			$this->_routes = array('default' => $compat) + $this->_routes;
 		}

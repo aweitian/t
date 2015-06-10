@@ -280,4 +280,11 @@ class tian{
         $decrypted = substr($decrypted, 0, -$padding);
         return $decrypted;
     }
+    /**
+     * 根据ENTRY_HOME长度返回相应个P
+     */
+    public static function getDefualtPreurlMask(){
+    	if(ENTRY_HOME == "")return "";
+    	return str_repeat("p", count(explode("/", trim(ENTRY_HOME,"/"))));
+    }
 }

@@ -90,7 +90,6 @@ class app{
 			"onecard",	
 		);
 	}
-	
 // 	/**
 // 	 * @param array $data 一维数组
 // 	 * @param string $tpl 模板中的key,val将会被替换

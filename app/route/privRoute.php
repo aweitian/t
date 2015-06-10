@@ -8,7 +8,7 @@ require_once LIB_PATH."/mvc/route/routes/defaultRoute.php";
 
 class privRoute extends defaultRoute{
 	public function __construct(){
-		$p=str_repeat("p", count(explode("/", trim(ENTRY_HOME,"/"))));
+		$p=tian::getDefualtPreurlMask();
 		parent::__construct(ENTRY_HOME."/priv(/[\d\D]+)?",$p."mca");
 	}
 }

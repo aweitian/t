@@ -8,7 +8,7 @@ require_once LIB_PATH."/mvc/route/routes/defaultRoute.php";
 
 class svcRoute extends defaultRoute{
 	public function __construct(){
-		$p=str_repeat("p", count(explode("/", trim(ENTRY_HOME,"/"))));
+		$p=tian::getDefualtPreurlMask();
 		parent::__construct(ENTRY_HOME."/".SVC_NAME."(/[\d\D]+)?",$p."mca");
 	}
 	public function getActionPath(){
