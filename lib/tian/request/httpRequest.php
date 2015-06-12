@@ -23,6 +23,9 @@ class httpRequest{
 	public function getQueryString(){
 		return $_SERVER['QUERY_STRING'];
 	}
+	public function getUserAgent(){
+		return $this->header('USER_AGENT');
+	}
 	/**
 	 * 小写
 	 * @return string

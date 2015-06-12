@@ -1,0 +1,16 @@
+function rowTpl($total,$colspan){
+	if($total == 0)return "";
+	for($row=0; $row<ceil($total/$colspan); $row++){
+		if($row > 0)echo '</div><!-- row -->';
+		echo '<div class="row">';
+		for($col=0; $col<$colspan; $col++){
+			if($row * $colspan + $col >= $total)break;
+			echo $row."/".$col . " ";
+		}
+	}
+	if((int)$total/$colspan == ceil($total/$colspan))
+		echo '</div><!-- row -->';
+	else
+		echo '</div><!-- row ~~ -->';
+		
+}

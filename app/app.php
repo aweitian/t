@@ -90,9 +90,19 @@ class app{
 			"onecard",	
 		);
 	}
+	public static function isMobile(){
+		$userAgent = tian::$context->getRequest()->getUserAgent();
+		$userAgent = strtolower($userAgent);
+		$keywords = array("android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "symbian", "blackberry", "ucweb", "linux; u;" ) ;
+		foreach($keywords as $kw){
+			if(strpos($userAgent, $kw) !== false)return true;
+		}
+		
+		return false;
+	}
 // 	/**
-// 	 * @param array $data 一维数组
-// 	 * @param string $tpl 模板中的key,val将会被替换
+// 	 * @param array $data 涓�淮鏁扮粍
+// 	 * @param string $tpl 妯℃澘涓殑key,val灏嗕細琚浛鎹�
 // 	 */
 // 	public static function arrWrap($data,$tpl="<tr><td>key</td><td>val</td></tr>"){
 // 		$ret="";

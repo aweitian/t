@@ -1,9 +1,10 @@
-<?php
+﻿<?php
 /**
  * @author awei.tian
  * date: 2013-9-11
  * 说明:
  */
+
 require_once 'app/const.php';
 require_once LIB_PATH.'/tian.php';
 tian::init();
