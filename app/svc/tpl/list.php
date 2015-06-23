@@ -7,7 +7,7 @@
 // var_dump($data);exit;
 $colspan = 4;
 // $colspan_width = (int)(99 / $colspan);
-// var_dump($data);exit;
+var_export($data);exit;
 ?>
 <div class="container">
 <div class="row f-box">
