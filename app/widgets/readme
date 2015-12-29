@@ -1,5 +1,0 @@
-static
-dynamic
-
-	widget only show static ui at a time
-	dynamic ui will request url one by one or use js cache

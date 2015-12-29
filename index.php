@@ -1,79 +1,22 @@
-﻿<?php
-/**
- * @author awei.tian
- * date: 2013-9-11
- * 说明:
- */
+<?php
+define("FULL_URL",$_SERVER['SERVER_NAME']);
 
-require_once 'app/const.php';
-require_once LIB_PATH.'/tian.php';
-tian::init();
-require_once ENTRY_PATH.'/app/app.php';
-tian::$context->setRequest(new httpRequest());
-tian::$context->setResponse(new httpResponse());
-//tian::$context->getResponse()->start();
-tian::$context->setRouter(new router(tian::$context->getRequest()));
-require_once ENTRY_PATH."/app/route/webservicesRoute.php";
-require_once ENTRY_PATH."/app/route/privRoute.php";
-require_once ENTRY_PATH."/app/route/svcRoute.php";
-require_once ENTRY_PATH."/app/dispatcher/dispatcher.php";
-require_once ENTRY_PATH."/app/controller.php";
+#文件系统入口路径,路径尾部没有 /
+define("FILE_SYSTEM_ENTRY",realpath("./"));
 
-//C::addAutoloadPath("assetsController", LIB_PATH."/resource/assets.php");
-C::addAutoloadPath("model", LIB_PATH."/mvc/model/model.php");
-C::addAutoloadPath("view", LIB_PATH."/mvc/view/view.php");
-tian::$context->getRouter()->addRoute(SVC_NAME,new svcRoute());
-tian::$context->getRouter()->addRoute("webservices",new webservicesRoute());
-tian::$context->getRouter()->addRoute("privilege",new privRoute());
-tian::$context->setMessage(new message(tian::$context->getRequest(), 
-tian::$context->getRouter()->route()->getUrlManager()));
-
-switch (tian::$context->getRouter()->getMatchedRouteName()){
-	case SVC_NAME:
-		tian::$context->getMessage()->setModuleLoc(ENTRY_PATH."/app");
-		break;
-	case "webservices":
-		tian::$context->getMessage()->setModuleLoc(ENTRY_PATH."/app/webservices");
-		break;
-	case "privilege":
-		require_once APP_PATH."/privilege/init.php";
-		tian::$context->getMessage()->setModuleLoc(ENTRY_PATH."/app/privilege/controllers");
-		break;
-	default:
-		break;
+#网站HTTP入口路径,网站放在根目录定义为空，假如放在joyhr/1目录下，定义为  /joyhr/1   (以/开头，尾部没有 /)
+#http_entry.txt这个文件不提交到SVN
+if (file_exists(FILE_SYSTEM_ENTRY."/http_entry.txt")) {
+	define("HTTP_ENTRY",file_get_contents(FILE_SYSTEM_ENTRY."/http_entry.txt"));
+} else {
+	define("HTTP_ENTRY","");
 }
-tian::$context->addDispatcher("default",new dispatcher(tian::$context->getMessage()));
-tian::$context->addDispatcher(SVC_NAME,new noActionDispatcher(tian::$context->getMessage()));
+require(FILE_SYSTEM_ENTRY."/lib/Init.php");
+require(FILE_SYSTEM_ENTRY."/lib/Controller.php");
+require(FILE_SYSTEM_ENTRY."/lib/Router.php");
 
+require(FILE_SYSTEM_ENTRY."/app/app.php"); 
 
+App::run();
 
-if(!tian::dispatch()){
-	if(APP_DEBUG){
-		echo "<br><br><br><br><br><br><br><br><br><br><br><br><h2>DEBUG INFO:</h2><hr>";
-		var_dump(tian::$context->getRouter()->getMatchedRouteName());
-		tian::$context->getRouter()->debug();
-		tian::$context->getDispatcher(tian::$context->getRouter()->getMatchedRouteName())->debug();
-		var_dump(tian::$context->getRouter()->getRoute()->getUrlManager()->getPmcai());		
-	}
-	tian::$context->getResponse()->_404();
-}
-// tian::$context->getResponse()->stop();
-// print tian::$context->getResponse()->output;
-
-
-// echo "<br><br><br><br><br><br><br><br><br><br><br><br><h2>DEBUG INFO:</h2><hr>";
-// var_dump(tian::$context->getRouter()->getMatchedRouteName());
-// tian::$context->getRouter()->debug();
-// tian::$context->getDispatcher(tian::$context->getRouter()->getMatchedRouteName())->debug();
-// var_dump(tian::$context->getRouter()->getRoute()->getUrlManager()->getPmcai());
-// echo tian::createUrl(array('control','action'));
-// echo "<br>";
-// echo tian::createUrlOnMsg(
-// 		array(
-// 				'#Control'=>'action',
-// 				'#Action'=>"aaa",
-// 		)
-
-// );
-//var_dump(tian::$context->getMessage());
 ?>

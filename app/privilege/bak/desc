@@ -1,7 +1,0 @@
-每个页面上的WIDGET只使用自己NODEPATH上的数据源
-数据源允许静态不添加到tdc_datasrc_relations表中
-当用户添加数据源时，先选择数据源存储类型(s,f,l)和数据类型(22ld,...)
-每个WIDGET都有一个实体配置数据
-
-一个页面由N个WIDGET组成，每个WIDGET由DATASRC+CONFIG组成
-每个WIDGET还有是否实现BUY接口
