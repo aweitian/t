@@ -1,5 +1,5 @@
 <?php
-
+define("PWD_SALT","($&#(#762Kweuj");
 class App{
 	/**
 	 * 
@@ -68,5 +68,16 @@ class App{
 			$ip = $ips[sizeof($ips)-1];
 		}
 		return $ip;
+	}
+	public static function calcPwd($pwd) {
+		return md5($pwd.PWD_SALT);
+	}
+	public static function formToArray($str){
+		$ret=array();
+		parse_str($str, $ret);
+		return $ret;
+	}
+	public static function arrayToForm($data,$numeric_prefix="numeric_prefix"){
+		return http_build_query($data,$numeric_prefix);
 	}
 }

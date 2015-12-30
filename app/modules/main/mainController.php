@@ -6,7 +6,7 @@
  */
 class mainController extends Controller{
 	public function __construct(){
-		echo "greet from mainController.__construct";
+		echo "greet from mainController.__construct ..";
 	}
 	public function welcomeAction(){
 		echo "hi";
