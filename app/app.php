@@ -1,5 +1,7 @@
 <?php
 define("PWD_SALT","($&#(#762Kweuj");
+require_once 'app/model.php';
+require_once 'app/view.php';
 class App{
 	/**
 	 * 

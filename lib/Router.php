@@ -115,7 +115,7 @@ class router{
 			$controlLoc = FILE_SYSTEM_ENTRY.DIRECTORY_SEPARATOR
 			."app".$this->module_loc.DIRECTORY_SEPARATOR."".$cls
 			.DIRECTORY_SEPARATOR
-					.$cls."Controller.php";
+					."control.php";
 // 			echo $controlLoc;		
 			$clsName = $cls."Controller";
 // 			echo $clsName;exit;
@@ -147,11 +147,11 @@ class router{
 			if (!$rc->hasMethod($m)) {
 				$this->_404();
 			}
-			$this->control = $clsName;
+			$this->control = substr($clsName,0,-10);
 			$method=$rc->getMethod($m);
 			$method->invokeArgs($controller, array($this->pathinfo));
 		} else {
-			$this->control = $clsName;
+			$this->control = substr($clsName,0,-10);
 			$rc->newInstance();
 		}
 	}

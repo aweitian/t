@@ -23,6 +23,9 @@ class Controller {
 	public function isPost(){
 		return App::isPost();
 	}
+	public function exitMsg($msg){
+		App::$router->response($msg);
+	}
 }
 
 class AuthController extends Controller {
