@@ -95,11 +95,11 @@ class router{
 			$cls = explode("/", trim($cap,"/"),3);
 			if (count($cls) == 0) {
 				$cls = "main";
-				$this->method = "";
+				$this->method = "welcome";
 				$this->pathinfo = "";
 			} else if(count($cls) == 1) {
 				$cls = $cls[0];
-				$this->method = "";
+				$this->method = "welcome";
 				$this->pathinfo = "";
 			} else if(count($cls) == 2) {
 				$this->method = $cls[1];
@@ -142,17 +142,17 @@ class router{
 			$this->response("Permission denied!");
 		}
 		if ($this->method) {
+			$this->control = substr($clsName,0,-10);
 			$controller = $rc->newInstance();
 			$m = ($this->method)."Action";
 			if (!$rc->hasMethod($m)) {
 				$this->_404();
 			}
-			$this->control = substr($clsName,0,-10);
 			$method=$rc->getMethod($m);
 			$method->invokeArgs($controller, array($this->pathinfo));
-		} else {
-			$this->control = substr($clsName,0,-10);
-			$rc->newInstance();
+		}else{
+			$this->_404();
 		}
+		
 	}
 }

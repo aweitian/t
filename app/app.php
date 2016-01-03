@@ -1,17 +1,18 @@
 <?php
 define("PWD_SALT","($&#(#762Kweuj");
-require_once 'app/model.php';
-require_once 'app/view.php';
+require_once FILE_SYSTEM_ENTRY.'/app/appInit.php';
 class App{
 	/**
 	 * 
 	 * @var router
 	 */
 	public static $router;
+	public static $roles;
 	private function __construct(){
 		
 	}
 	public static function run(){
+		App::$roles = require FILE_SYSTEM_ENTRY.'/app/roles/role.php';
 		self::$router = new router();
 		self::$router->route();
 	}
@@ -44,7 +45,8 @@ class App{
 		}
 		return $url;
 	}
-	public static function url_ca($ctl,$act) {
+	public static function url_ca($ctl,$act="") {
+		if(!$act)return HTTP_ENTRY.'/'.$ctl;
 		return HTTP_ENTRY.'/'.$ctl.'/'.$act;
 	}
 	public static function isPost(){

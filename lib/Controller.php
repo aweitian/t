@@ -10,8 +10,27 @@ class Controller {
 	}
 	public function url($ctr=DEFAULT_CONTROLLER,$act=DEFAULT_ACTION,$module=""){
 		return HTTP_ENTRY
-		. ($module == "" ? "" : "/".$module) . "/".$ctr . "/".$ctr
+		. ($module == "" ? "" : "/".$module) . "/".$ctr . "/".$act
 		;
+	}
+	public function go($ctr=DEFAULT_CONTROLLER,$act=DEFAULT_ACTION,$module=""){
+		header("location:".$this->url($ctr,$act,$module));
+		exit;
+	}
+	public function redirect($url){
+		header("location:".HTTP_ENTRY.$url);
+		exit;
+	}
+	public function back(){
+		header("location:".$_SERVER["HTTP_REFERER"]);
+		exit;
+	}
+	public function goHome(){
+		if (HTTP_ENTRY == "")
+			header("location:/");
+		else
+			header("location:".HTTP_ENTRY);
+		exit;
 	}
 	/**
 	 * 只设置HTTP STATUS

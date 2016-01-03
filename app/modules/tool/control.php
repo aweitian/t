@@ -4,8 +4,8 @@
  * Author: Awei.tian
  * Description: 
  */
-require_once 'app/modules/tool/model.php';
-require_once 'app/modules/tool/view.php';
+require_once FILE_SYSTEM_ENTRY.'/app/modules/tool/model.php';
+require_once FILE_SYSTEM_ENTRY.'/app/modules/tool/view.php';
 class toolController extends Controller{
 	/**
 	 * 
