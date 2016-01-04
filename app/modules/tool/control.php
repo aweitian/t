@@ -52,7 +52,7 @@ class toolController extends Controller{
 			$this->exitMsg('ok,<a href="/tool">continue</a>');
 		}else{
 			$content = $this->view->fetch('form');
-			$this->view->wrap($content)->show();
+			$this->view->hideHeader()->hideFooter()->wrap($content)->show();
 		}
 	}
 	public function welcomeAction(){
