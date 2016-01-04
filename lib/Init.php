@@ -21,6 +21,6 @@ require(FILE_SYSTEM_ENTRY."/lib/DBUtil.php");
 require(FILE_SYSTEM_ENTRY."/lib/Router.php");
 require(FILE_SYSTEM_ENTRY."/lib/Session.php");
 require(FILE_SYSTEM_ENTRY."/lib/Validator.php");
-
+require(FILE_SYSTEM_ENTRY."/lib/Pagination.php");
 
 ?>

@@ -12,7 +12,7 @@ if (!($this instanceof view)){
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>永安手游代练顾客计时扣费系统</title>
+<title>debug</title>
 <meta name="keywords" content=""/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width"/>

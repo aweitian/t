@@ -18,9 +18,16 @@ class debugController extends Controller{
 	 */
 	private $view;
 	public function __construct(){
-		
+		$this->model = new debugModel();
+		$this->view = new debugView();
 	}
 	public function md5Action(){
 		echo App::calcPwd("tony11.");
+	}
+	public function welcomeAction(){
+		$cur = isset($_GET["pn"]) ? intval($_GET["pn"]) : 1;
+		$total = 33;
+		$demo = new Pagination($total,$cur,10,3);
+		$this->view->test($demo);
 	}
 }
