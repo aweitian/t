@@ -16,11 +16,24 @@ class roleSession extends Session{
 	public function getRoleName(){
 		return App::$roles[$this->get("role")];
 	}
+	public function isAdmin(){
+		return $this->getRole() == "admin";
+	}
+	public function hasPriv(){
+		if($this->getUserID() == 1)return true;
+		return $this->isAdmin();
+	}
 	public function setName($name){
 		$this->set("name", $name);
 	}
+	public function setUserID($sid){
+		$this->set("userId", $sid);
+	}
 	public function getName(){
 		return $this->get("name");
+	}
+	public function getUserID(){
+		return $this->get("userId");
 	}
 	public function isLogined(){
 		$n = $this->getName();

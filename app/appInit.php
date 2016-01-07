@@ -12,7 +12,7 @@ if(defined('SAE_MYSQL_DB')){
 }else{
 	define("DB_DNS","mysql:host=localhost;dbname=anpl;port=3306");
 	define("DB_USER","root");
-	define("DB_PASS","");
+	define("DB_PASS","root");
 	define("DB_CHARSET","utf8");
 }
 
