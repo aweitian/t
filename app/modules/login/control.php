@@ -35,7 +35,6 @@ class loginController extends Controller{
 			}
 			$this->loginUI();
 		}
-		
 	}
 	private function login(){
 		$role = $this->model->checkNamePass($_POST["n"], $_POST["p"]);

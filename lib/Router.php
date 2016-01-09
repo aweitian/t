@@ -74,16 +74,9 @@ class router{
 	}
 	private function stripModule($path) {
 		$u = explode("/", trim($path,"/"),3);
-		if ($u[0] == "api") {
-			$this->module = "api";
-			$this->module_loc = "/api";
-			array_shift($u);
-			return join($u,"/");
-		} else {
-			$this->module = DEFAULT_MODULE;
-			$this->module_loc = "/modules";
-			return $path;
-		}
+		$this->module = DEFAULT_MODULE;
+		$this->module_loc = "/modules";
+		return $path;
 	}
 	public function route() {
 		$url = parse_url($this->stripHttpEntry());

@@ -23,6 +23,8 @@ if (!($this instanceof view)){
 -->
 <link rel="stylesheet" href="<?php print HTTP_ENTRY?>/static/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="<?php print HTTP_ENTRY?>/static/css/bootstrap-theme.min.css">
+<script src="<?php print HTTP_ENTRY?>/static/js/jquery-1.11.2.js"></script>
+<script src="<?php print HTTP_ENTRY?>/static/js/bootstrap.min.js"></script>
 
 
 </head>
@@ -34,7 +36,5 @@ if (!($this instanceof view)){
 <?php if($this->isShowFooter()):?>
 <?php include 'template/default/footer.php';?>
 <?php endif;?>
-<script src="<?php print HTTP_ENTRY?>/static/js/jquery-1.11.2.js"></script>
-<script src="<?php print HTTP_ENTRY?>/static/js/bootstrap.min.js"></script>
 </body>
 </html>

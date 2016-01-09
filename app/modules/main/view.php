@@ -5,5 +5,7 @@
  * Description: 
  */
 class mainView extends view{
-	
+	public function showTask($list){
+		return $this->fetch("task",$list);
+	}
 }
