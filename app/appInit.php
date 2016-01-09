@@ -10,7 +10,7 @@ if(defined('SAE_MYSQL_DB')){
 }else if(false !== strpos(FILE_SYSTEM_ENTRY, "openshift")){
 
 }else{
-	define("DB_DNS","mysql:host=localhost;dbname=anpl;port=3306");
+	define("DB_DNS","mysql:host=localhost;dbname=bt_bdzd_blchk;port=3306");
 	define("DB_USER","root");
 	define("DB_PASS","root");
 	define("DB_CHARSET","utf8");

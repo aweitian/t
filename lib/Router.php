@@ -43,7 +43,11 @@ class router{
 	public function _404(){
 		@header('HTTP/1.x 404 Not Found');
 		@header('Status: 404 Not Found');
-		$this->response("<p align='center'>".file_get_contents(FILE_SYSTEM_ENTRY."/static/img/404.php")."<br><br><a href='".HTTP_ENTRY."'>back to Home</a></p>") ;
+		ob_start();
+		include "lib/404.tpl.php";
+		$ret = ob_get_contents();
+		ob_end_clean();
+		$this->response($ret) ;
 	}
 	private function requestUri(){
 		if (isset($_SERVER['HTTP_X_REWRITE_URL'])){
