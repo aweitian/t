@@ -5,13 +5,58 @@
  * Description: 
  */
 $data = explode("\n", $data);
-
+function formSubmitAction(){
+	if(App::isPost()){
+		return HTTP_ENTRY."/dl";
+	}
+	return HTTP_ENTRY."/";
+}
+function formSubmitMethod(){
+	if(App::isPost()){
+		return "get";
+	}
+	return "post";
+}
+function formSubmitBtnText(){
+	if(App::isPost()){
+		return "下载查询结果";
+	}
+	return "开始任务";
+}
 ?>
+<script type="text/javascript">
+<!--
+function updst(url,st){
+	var ch = [
+		"glyphicon glyphicon-ok-sign text-success",
+		"glyphicon glyphicon-info-sign text-danger",
+		"glyphicon glyphicon-minus-sign text-warning",
+		"glyphicon glyphicon-remove-sign text-warning",
+		"glyphicon glyphicon-question-sign text-muted"
+	],th = [
+		"没有发现负面信息",
+		"存在负面信息",
+		"抓取内容时出错",
+		"无效的网址",
+		"还未初始化"
+	];
+	$("form input[type=checkbox]").each(function(i,e){
+		if(e.value == url){
+			$(e).parent().next().find("span").attr("class",ch[st]).attr("title",th[st]);
+		}
+
+	})
+}
+//-->
+</script>
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<form id="taskform">
-<input type="submit" value="开始任务" class="btn btn-default">
+<form id="taskform" method="<?php print formSubmitMethod()?>" action="<?php print formSubmitAction()?>">
+<input type="submit" value="<?php print formSubmitBtnText()?>" class="btn btn-default">
+<?php if (!App::isPost()):?>
+<a style="margin-left: 32px;font-size:12px;" href="<?php print HTTP_ENTRY?>/dl">下载最后一次查询结果</a>
+<?php endif;?>
 <table class="table table-striped table-condensed">
 <thead>
 <tr>
@@ -25,9 +70,9 @@ $data = explode("\n", $data);
 <!-- glyphicon glyphicon glyphicon-info-sign text-danger -->
 <?php foreach ($data as $key=>$item):?>
 <tr>
-	<td><input<?php if(!Validator::isUrl($item)):?> disabled<?php else:?> checked<?php endif;?> type="checkbox" value="<?php print $key?>"><input type="hidden" name="url<?php print $key?>" value="<?php print trim($item)?>"></td>
+	<td><input<?php if(!Validator::isUrl($item)):?> disabled<?php else:?> checked<?php endif;?> type="checkbox" value="<?php print trim($item)?>" name="urls[]"></td>
 	<td><span class="glyphicon glyphicon-question-sign text-muted"></span></td>
-	<td><?php print trim($item)?></td>	
+	<td><?php if(!Validator::isUrl($item)):?><?php print trim($item)?><?php else:?><a href="<?php print trim($item)?>" target="_blank"><?php print trim($item)?></a><?php endif;?></td>	
 </tr>
 <?php endforeach;?>
 </tbody>
@@ -55,16 +100,20 @@ $("#reversechk").click(function(){
 
 
 $("#taskform").submit(function(){
-	var data = {};var m = this;
-	$("input[type=checkbox]").each(function(){
-		if(this.checked && this.getAttribute("value")){
-			data[this.value] = m["url"+this.value]["value"];
-		}
-	});
-	$.post("<?php print HTTP_ENTRY?>/api",{url:data},function(result){
-		alert(result);
-	});
-	return false;
+//  	var data = {};var m = this;
+//  	$("input[type=checkbox]").each(function(){
+//  		if(this.checked && this.getAttribute("value")){
+//  			data[this.value] = m["url"+this.value]["value"];
+//  		}
+//  	});
+//$.post("<?php print HTTP_ENTRY?>/api",{url:data},function(result){
+//  		alert(result);
+//  	});
+<?php if(App::isPost()):?>
+return true;
+<?php else:?>
+	return confirm("本次提交会清空上次查询结果，你确定要提交吗？");
+<?php endif;?>
 });
 
 </script>

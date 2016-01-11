@@ -45,4 +45,7 @@ class view{
 		print $this->html;
 		exit;
 	}
+	public function getHtml(){
+		return $this->html;
+	}
 }

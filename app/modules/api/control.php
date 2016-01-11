@@ -57,7 +57,7 @@ class apiController extends Controller{
 		foreach($url as $num => $item){
 			if(Validator::isUrl($item)){
 				$content = $this->clean($this->fetch($item));
-				$this->result[$key] = $this->jd($content);
+				$this->result[$num] = $this->jd($content);
 			}else{
 				$this->result[$num] = 2;
 			}
@@ -68,8 +68,18 @@ class apiController extends Controller{
 		));
 	}
 	private function clean($con){
-		$con = strip_tags($con);
-		return preg_replace("/\s+/","",$con);
+		#去除脚本
+		$con = preg_replace("#<script[^>]*>[\d\D]*?</script>#","",$con);
+		#去除样式
+		$con = preg_replace("#<style[^>]*>[\d\D]*?</style>#","",$con);
+		#去除所有标签
+		$con = preg_replace("#<[^>]+>#","",$con);
+		#去除所有空白
+		$con = preg_replace("/\s+/","",$con);
+		
+		#去除所有HTML空白字符
+		$con = str_replace("&nbsp;","",$con);
+		return $con;
 	}
 	private function fetch($url){
 		return file_get_contents($url);
@@ -78,15 +88,15 @@ class apiController extends Controller{
 		foreach($this->word as $kwArr) {
 			$ret = true;
 			foreach ($kwArr as $kwItem) {
-				if (strpos($word,$kwItem) === false) {
+				if (strpos($con,$kwItem) === false) {
 					$ret = false;
 					break;
 				}
 			}
 			if ($ret) {
-				return 0;
+				return 1;
 			}
 		}
-		return 1;
+		return 0;
 	}
 }

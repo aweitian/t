@@ -54,4 +54,33 @@ class mainModel extends model{
 		}
 		return "";
 	}
+	
+	
+	public function putResultItem($data){
+		return $this->db->exec("
+			INSERT INTO `results` 
+				(
+				`uid`,
+				`url`, 
+				`result`, 
+				`ma_word`, 
+				`rawhtml`, 
+				`str_content`
+				)
+				VALUES
+				(
+				:uid,
+				:url, 
+				:result, 
+				:ma_word, 
+				:rawhtml, 
+				:str_content
+				);
+				", $data);
+	}
+	public function cleanResults($uid){
+		return $this->db->exec("DELETE FROM `results` WHERE `uid` = :uid ;", array(
+			"uid" => $uid	
+		));
+	}
 }
