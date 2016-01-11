@@ -43,7 +43,11 @@ class router{
 	public function _404(){
 		@header('HTTP/1.x 404 Not Found');
 		@header('Status: 404 Not Found');
-		$this->response("<p align='center'>".file_get_contents(FILE_SYSTEM_ENTRY."/static/img/404.php")."<br><br><a href='".HTTP_ENTRY."'>back to Home</a></p>") ;
+		ob_start();
+		include "lib/404.tpl.php";
+		$ret = ob_get_contents();
+		ob_end_clean();
+		$this->response($ret) ;
 	}
 	private function requestUri(){
 		if (isset($_SERVER['HTTP_X_REWRITE_URL'])){
@@ -70,16 +74,9 @@ class router{
 	}
 	private function stripModule($path) {
 		$u = explode("/", trim($path,"/"),3);
-		if ($u[0] == "api") {
-			$this->module = "api";
-			$this->module_loc = "/api";
-			array_shift($u);
-			return join($u,"/");
-		} else {
-			$this->module = DEFAULT_MODULE;
-			$this->module_loc = "/modules";
-			return $path;
-		}
+		$this->module = DEFAULT_MODULE;
+		$this->module_loc = "/modules";
+		return $path;
 	}
 	public function route() {
 		$url = parse_url($this->stripHttpEntry());

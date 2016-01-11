@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+.ajaxloader
+{
+	width: 6px;
+	height: 6px;
+	border: 2px solid #000;
+	border-right-color: transparent;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}	
+@keyframes spin
+{
+	from { transform: rotate(0deg);   opacity: 0.8; }
+	50%  { transform: rotate(180deg); opacity: 1.0; }
+	to   { transform: rotate(360deg); opacity: 0.8; }
+}

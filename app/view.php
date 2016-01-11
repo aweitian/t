@@ -10,7 +10,7 @@ class view{
 	protected $html;
 	public function wrap($content,$title=""){
 		ob_start();
-		include 'template/layout.php';
+		include 'template/default/layout.php';
 		$this->html = ob_get_contents();
 		ob_end_clean();
 		return $this;
@@ -44,5 +44,8 @@ class view{
 	public function show(){
 		print $this->html;
 		exit;
+	}
+	public function getHtml(){
+		return $this->html;
 	}
 }

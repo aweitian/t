@@ -48,7 +48,17 @@ class Controller {
 }
 
 class AuthController extends Controller {
+	/**
+	 * 
+	 * @var roleSession
+	 */
+	protected $role;
 	public static function _checkPrivilege() {
 		return false;
+	}
+	protected function checkPriv($priv){
+		if(!$this->role->hasPriv($priv)){
+			$this->exitMsg("Permission denied > <!");
+		}
 	}
 }
